@@ -401,7 +401,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const facts = [
         'Từng có một người tự xưng là phù thủy nói Troy là hiện thân của The Chariot khi Troy mới được 7 tuổi',
         'Troy từng săn bắn cùng cha ở Nga, bắn súng săn khá thành thạo nhưng không thích đi săn',
-        'Có thể bạn chưa biết: Troy bị cận hơn 2 độ nhưng không bao giờ đeo kính',
+        'Có thể bạn chưa biết: Troy bị cận hơn 2 độ nhưng không bao giờ đeo kính trừ khi cần đọc sách hoặc tài liệu mà chữ khá nhỏ',
         'Troy vừa thích vừa không thích public',
         'Ở Nhật, "Troy" thường được phát âm là "Toroi" (トロイ) nên một số đồng nghiệp khá thân sẽ gọi Troy là "Toro" (トロ)',
         'Có một người rất hay gọi Troy thành "Tororo" (とろろ) - một món ăn Nhật làm từ củ mài',
