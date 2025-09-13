@@ -438,16 +438,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const facts = [
         'Từng có một người tự xưng là phù thủy nói Troy là hiện thân của The Chariot khi Troy mới được 7 tuổi',
-        'Troy từng săn bắn cùng cha ở Nga, bắn súng săn khá thành thạo',
-        'Có thể bạn chưa biết: Troy bị cận 2 độ nên không bao giờ đeo kính',
+        'Troy từng săn bắn cùng cha ở Nga, bắn súng săn khá thành thạo nhưng không thích đi săn',
+        'Có thể bạn chưa biết: Troy bị cận hơn 2 độ nhưng không bao giờ đeo kính',
         'Troy vừa thích vừa không thích public',
         'Ở Nhật, "Troy" thường được phát âm là "Toroi" (トロイ) nên một số đồng nghiệp khá thân sẽ gọi Troy là "Toro" (トロ)',
         'Có một người rất hay gọi Troy thành "Tororo" (とろろ) - một món ăn Nhật làm từ củ mài',
-        'Một thân chủ dấu tên hay gọi Troy (Toroi) là "Tora" (虎) - con hổ trong tiếng Nhật',
+        'Một thân chủ giấu tên hay gọi Troy (Toroi) là "Tora" (虎) - con hổ trong tiếng Nhật',
         'Troy không thấy lạ khi bị gọi là "Torai" vì quen với việc bị gọi nhầm',
         'Troy rất ghét đồ ngọt, nhưng nếu Yuri đút thì sẽ ăn mà không cau mày lấy một cái',
         'Troy khi đến kỳ kinh nguyệt sẽ cực kỳ dễ cáu gắt. Riêng với Yuri thì sẽ ôm suốt, vùi mặt vào người em',
-        'Troy có rất nhiều nyc nhưng chưa từng lên giường với họ'
+        'Troy có rất nhiều nyc nhưng chưa từng lên giường với họ',
+        'Nhu cầu tình dục của Troy rất cao',
     ];
 
     // Tạo countdown overlay
@@ -532,7 +533,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     // Thêm variables này ở đầu file (sau dòng let clickCount = 0;)
     let recentlyShownFacts = [];
-    const MAX_RECENT_FACTS = 11; // Số fact gần nhất để tránh lặp lại
+    const MAX_RECENT_FACTS = 12; // Số fact gần nhất để tránh lặp lại
 
     // Thêm function này trước function showFactWithEffect()
     function getUniqueFact() {
