@@ -411,6 +411,9 @@ document.addEventListener('DOMContentLoaded', function() {
         'Troy khi đến kỳ kinh nguyệt sẽ cực kỳ dễ cáu gắt. Riêng với Yuri thì sẽ ôm suốt, vùi mặt vào người em',
         'Troy có rất nhiều nyc nhưng chưa từng lên giường với họ',
         'Nhu cầu tình dục của Troy rất cao',
+        'Thành phố nơi Troy sinh ra là Frankfurt am Main - Đức (Frankfurt trên sông Main)',
+        'Khi còn ở Nga Troy có để tóc dài ngang - hơn vai và thường bị nhầm là con gái',
+        'Troy biết chơi violin vì bị mẹ ép đi học chứ không thích chơi nhạc cụ',
     ];
 
     // Tạo countdown overlay
@@ -495,7 +498,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     // Thêm variables này ở đầu file (sau dòng let clickCount = 0;)
     let recentlyShownFacts = [];
-    const MAX_RECENT_FACTS = 12; // Số fact gần nhất để tránh lặp lại
+    const MAX_RECENT_FACTS = 15; // Số fact gần nhất để tránh lặp lại
 
     // Thêm function này trước function showFactWithEffect()
     function getUniqueFact() {
