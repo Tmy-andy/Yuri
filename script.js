@@ -355,7 +355,7 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
 
         const loadingText = document.createElement('div');
-        loadingText.innerHTML = '<i class="fas fa-user-secret"></i><br>Đang tải hồ sơ Troy...';
+        loadingText.innerHTML = '<img src="img/favicon.png"><br>Đang tải hồ sơ Troy...';
         loadingText.style.cssText = `
             color: white;
             text-align: center;
