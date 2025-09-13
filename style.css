@@ -631,7 +631,7 @@ button:focus {
     }
 
     .basic-info {
-        display: hidden;
+        display: none;
     }
     
     .info-item {
@@ -666,7 +666,7 @@ button:focus {
     }
 
     .basic-info {
-        display: hidden;
+        display: none;
     }
     
     .info-item {
