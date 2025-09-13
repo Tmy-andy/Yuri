@@ -544,7 +544,7 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
         
         notification.innerHTML = `
-            <div style="margin-bottom: 10px; font-size: 24px;">Troy's Fact</div>
+            <div style="margin-bottom: 10px; font-size: 24px;">Fact</div>
             <div>${randomFact}</div>
         `;
         
