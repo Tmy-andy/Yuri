@@ -619,7 +619,7 @@ button:focus {
 }
 
 /* Alternative Card-Style Layout (uncomment to use instead) */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .basic-info-mobile {
         display: grid;
         grid-template-columns: 1fr 1fr;

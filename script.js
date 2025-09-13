@@ -227,44 +227,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize search (uncomment if needed)
     // addSearchFunctionality();
 
-    // Add print functionality
-    const addPrintButton = () => {
-        const printButton = document.createElement('button');
-        printButton.innerHTML = '<i class="fas fa-print"></i> In trang';
-        printButton.style.cssText = `
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            padding: 10px 15px;
-            background: #333;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-            z-index: 1000;
-            transition: background 0.3s ease;
-        `;
-
-        printButton.addEventListener('mouseenter', () => {
-            printButton.style.background = '#555';
-        });
-
-        printButton.addEventListener('mouseleave', () => {
-            printButton.style.background = '#333';
-        });
-
-        printButton.addEventListener('click', () => {
-            window.print();
-        });
-
-        document.body.appendChild(printButton);
-    };
-
-    // Initialize print button
-    addPrintButton();
-
     // Add theme toggle functionality (for future enhancement)
     const addThemeToggle = () => {
         const themeToggle = document.createElement('button');
@@ -367,8 +329,8 @@ document.addEventListener('DOMContentLoaded', function() {
         img.src = 'img/favicon.png';
         img.className = 'loading-img';
         img.style.cssText = `
-            width: 300px;
-            height: 300px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             display: block;
             position: absolute;
@@ -384,8 +346,8 @@ document.addEventListener('DOMContentLoaded', function() {
         circle.style.cssText = `
             position: absolute;
             top: 50%; left: 50%;
-            width: 400px; height: 400px;
-            margin: -200px 0 0 -200px;
+            width: 300px; height: 300px;
+            margin: -150px 0 0 -150px;
             border: 4px solid transparent;
             border-top: 4px solid #9F672D;
             border-radius: 50%;
