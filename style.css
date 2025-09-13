@@ -517,3 +517,158 @@ button:focus {
 .section:hover::after {
     opacity: 0.6;
 }
+
+/* Enhanced Mobile Layout for Basic Info Section */
+@media (max-width: 768px) {
+    .basic-info {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        background: transparent;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+        margin-bottom: 30px;
+    }
+    
+    .info-item {
+        background: linear-gradient(135deg, #1e293b, #334155);
+        padding: 18px 20px;
+        border-radius: 12px;
+        border: 1px solid #475569;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        margin: 0;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .info-item::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(180deg, #3b82f6, #60a5fa);
+        border-radius: 0 4px 4px 0;
+    }
+    
+    .info-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(59, 130, 246, 0.2);
+        background: linear-gradient(135deg, #334155, #475569);
+        padding-left: 20px;
+    }
+    
+    .info-item i {
+        width: auto;
+        margin-right: 12px;
+        color: #60a5fa;
+        font-size: 20px;
+        min-width: 24px;
+    }
+    
+    .info-item span {
+        font-size: 15px;
+        line-height: 1.5;
+        flex: 1;
+    }
+    
+    .zodiac-icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .basic-info {
+        gap: 12px;
+        margin-bottom: 25px;
+    }
+    
+    .info-item {
+        padding: 16px 18px;
+        border-radius: 10px;
+    }
+    
+    .info-item::before {
+        width: 3px;
+    }
+    
+    .info-item i {
+        font-size: 18px;
+        margin-right: 10px;
+        min-width: 22px;
+    }
+    
+    .info-item span {
+        font-size: 14px;
+    }
+    
+    .zodiac-icon {
+        width: 22px;
+        height: 22px;
+        margin-right: 10px;
+    }
+}
+
+/* Alternative Card-Style Layout (uncomment to use instead) */
+@media (max-width: 768px) {
+    .basic-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        background: transparent;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+    }
+    
+    .info-item {
+        background: linear-gradient(135deg, #1e293b, #334155);
+        padding: 16px;
+        border-radius: 10px;
+        border: 1px solid #475569;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        min-height: 100px;
+        justify-content: center;
+    }
+    
+    .info-item i,
+    .zodiac-icon {
+        margin-bottom: 8px;
+        margin-right: 0;
+        font-size: 22px;
+    }
+    
+    .info-item span {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 480px) {
+    .basic-info {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .info-item {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        padding: 14px 16px;
+        min-height: auto;
+    }
+    
+    .info-item i,
+    .zodiac-icon {
+        margin-bottom: 0;
+        margin-right: 12px;
+        font-size: 18px;
+    }
+}
