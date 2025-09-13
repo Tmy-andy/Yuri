@@ -338,56 +338,95 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add loading animation
     const showLoadingComplete = () => {
-        // Create loading overlay
-        const loadingOverlay = document.createElement('div');
-        loadingOverlay.style.cssText = `
+        const loaderContainer = document.createElement('div');
+        loaderContainer.id = 'loading-container';
+        loaderContainer.style.cssText = `
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #1a1a1a;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: #111;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             z-index: 9999;
+            opacity: 1;
             transition: opacity 0.5s ease;
         `;
 
-        const loadingText = document.createElement('div');
-        loadingText.innerHTML = '<img src="img/favicon.png"><br>Đang tải hồ sơ Troy...';
-        loadingText.style.cssText = `
-            color: white;
-            text-align: center;
-            font-size: 18px;
+        // Tạo wrapper loader
+        const loader = document.createElement('div');
+        loader.className = 'loader';
+        loader.style.cssText = `
+            position: relative;
+            width: 150px;
+            height: 150px;
         `;
-        loadingText.querySelector('i').style.cssText = `
-            font-size: 48px;
-            margin-bottom: 20px;
+
+        // Thêm ảnh favicon
+        const img = document.createElement('img');
+        img.src = 'img/favicon.png';
+        img.className = 'loading-img';
+        img.style.cssText = `
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
             display: block;
-            animation: pulse 1.5s infinite;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 2;
+            transform: translate(-50%, -50%);
         `;
+
+        // Tạo vòng tròn quay
+        const circle = document.createElement('div');
+        circle.className = 'circle';
+        circle.style.cssText = `
+            position: absolute;
+            top: 50%; left: 50%;
+            width: 400px; height: 400px;
+            margin: -200px 0 0 -200px;
+            border: 4px solid transparent;
+            border-top: 4px solid #9F672D;
+            border-radius: 50%;
+            animation: spin 1.5s linear infinite;
+            z-index: 1;
+        `;
+
+        // Thêm img + circle vào loader
+        loader.appendChild(img);
+        loader.appendChild(circle);
+
+        // Thêm loader vào container
+        loaderContainer.appendChild(loader);
+
+        // Thêm container vào body
+        document.body.appendChild(loaderContainer);
 
         // Add pulse animation
         const style = document.createElement('style');
-        style.textContent = `
-            @keyframes pulse {
-                0%, 100% { opacity: 0.5; transform: scale(1); }
-                50% { opacity: 1; transform: scale(1.1); }
-            }
-        `;
+        style.innerHTML = `
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }`;
         document.head.appendChild(style);
 
-        loadingOverlay.appendChild(loadingText);
-        document.body.appendChild(loadingOverlay);
+        // Lưu thời gian bắt đầu
+        const startTime = Date.now();
 
-        // Remove loading overlay after delay
-        setTimeout(() => {
-            loadingOverlay.style.opacity = '0';
+        // Xóa loader khi trang load xong (ít nhất 2 giây) với fade out
+        window.addEventListener('load', () => {
+            const elapsed = Date.now() - startTime;
+            const minDuration = 2000; // 2 giây
+            const delay = Math.max(0, minDuration - elapsed);
             setTimeout(() => {
-                loadingOverlay.remove();
-            }, 500);
-        }, 1500);
+                loaderContainer.style.opacity = '0'; // bắt đầu fade out
+                setTimeout(() => {
+                    loaderContainer.style.display = 'none'; // ẩn hoàn toàn sau khi fade xong
+                }, 500); // 500ms phải trùng với transition CSS
+            }, delay);
+        });
     };
 
     // Show loading animation
