@@ -306,7 +306,7 @@ document.addEventListener('DOMContentLoaded', function() {
             position: fixed;
             top: 0; left: 0;
             width: 100%; height: 100%;
-            background: #111;
+            background: #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -349,7 +349,7 @@ document.addEventListener('DOMContentLoaded', function() {
             width: 300px; height: 300px;
             margin: -150px 0 0 -150px;
             border: 4px solid transparent;
-            border-top: 4px solid #9F672D;
+            border-top: 4px solid #ffc0c7;
             border-radius: 50%;
             animation: spin 1.5s linear infinite;
             z-index: 1;
@@ -394,258 +394,258 @@ document.addEventListener('DOMContentLoaded', function() {
     // Show loading animation
     showLoadingComplete();
 
-    // Enhanced Easter Egg với countdown và hiệu ứng đẹp
-    let clickCount = 0;
-    let countdownActive = false;
+    // // Enhanced Easter Egg với countdown và hiệu ứng đẹp
+    // let clickCount = 0;
+    // let countdownActive = false;
 
-    const facts = [
-        'Từng có một người tự xưng là phù thủy nói Troy là hiện thân của The Chariot khi Troy mới được 7 tuổi',
-        'Troy từng săn bắn cùng cha ở Nga, bắn súng săn khá thành thạo nhưng không thích đi săn',
-        'Có thể bạn chưa biết: Troy bị cận hơn 2 độ nhưng không bao giờ đeo kính trừ khi cần đọc sách hoặc tài liệu mà chữ khá nhỏ',
-        'Troy vừa thích vừa không thích public',
-        'Ở Nhật, "Troy" thường được phát âm là "Toroi" (トロイ) nên một số đồng nghiệp khá thân sẽ gọi Troy là "Toro" (トロ)',
-        'Có một người rất hay gọi Troy thành "Tororo" (とろろ) - một món ăn Nhật làm từ củ mài',
-        'Một thân chủ giấu tên hay gọi Troy (Toroi) là "Tora" (虎) - con hổ trong tiếng Nhật',
-        'Troy không thấy lạ khi bị gọi là "Torai" vì quen với việc bị gọi nhầm',
-        'Troy rất ghét đồ ngọt, nhưng nếu Yuri đút thì sẽ ăn mà không cau mày lấy một cái',
-        'Troy khi đến kỳ kinh nguyệt sẽ cực kỳ dễ cáu gắt. Riêng với Yuri thì sẽ ôm suốt, vùi mặt vào người em',
-        'Troy có rất nhiều nyc nhưng chưa từng lên giường với họ',
-        'Nhu cầu tình dục của Troy rất cao',
-        'Thành phố nơi Troy sinh ra là Frankfurt am Main - Đức (Frankfurt trên sông Main)',
-        'Khi còn ở Nga Troy có để tóc dài ngang - hơn vai và thường bị nhầm là con gái',
-        'Troy biết chơi violin vì bị mẹ ép đi học chứ không thích chơi nhạc cụ',
-    ];
+    // const facts = [
+    //     'Từng có một người tự xưng là phù thủy nói Troy là hiện thân của The Chariot khi Troy mới được 7 tuổi',
+    //     'Troy từng săn bắn cùng cha ở Nga, bắn súng săn khá thành thạo nhưng không thích đi săn',
+    //     'Có thể bạn chưa biết: Troy bị cận hơn 2 độ nhưng không bao giờ đeo kính trừ khi cần đọc sách hoặc tài liệu mà chữ khá nhỏ',
+    //     'Troy vừa thích vừa không thích public',
+    //     'Ở Nhật, "Troy" thường được phát âm là "Toroi" (トロイ) nên một số đồng nghiệp khá thân sẽ gọi Troy là "Toro" (トロ)',
+    //     'Có một người rất hay gọi Troy thành "Tororo" (とろろ) - một món ăn Nhật làm từ củ mài',
+    //     'Một thân chủ giấu tên hay gọi Troy (Toroi) là "Tora" (虎) - con hổ trong tiếng Nhật',
+    //     'Troy không thấy lạ khi bị gọi là "Torai" vì quen với việc bị gọi nhầm',
+    //     'Troy rất ghét đồ ngọt, nhưng nếu Yuri đút thì sẽ ăn mà không cau mày lấy một cái',
+    //     'Troy khi đến kỳ kinh nguyệt sẽ cực kỳ dễ cáu gắt. Riêng với Yuri thì sẽ ôm suốt, vùi mặt vào người em',
+    //     'Troy có rất nhiều nyc nhưng chưa từng lên giường với họ',
+    //     'Nhu cầu tình dục của Troy rất cao',
+    //     'Thành phố nơi Troy sinh ra là Frankfurt am Main - Đức (Frankfurt trên sông Main)',
+    //     'Khi còn ở Nga Troy có để tóc dài ngang - hơn vai và thường bị nhầm là con gái',
+    //     'Troy biết chơi violin vì bị mẹ ép đi học chứ không thích chơi nhạc cụ',
+    // ];
 
-    // Tạo countdown overlay
-    function createCountdownOverlay() {
-        const overlay = document.createElement('div');
-        overlay.id = 'countdown-overlay';
-        overlay.style.cssText = `
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        `;
+    // // Tạo countdown overlay
+    // function createCountdownOverlay() {
+    //     const overlay = document.createElement('div');
+    //     overlay.id = 'countdown-overlay';
+    //     overlay.style.cssText = `
+    //         position: fixed;
+    //         top: 0;
+    //         left: 0;
+    //         width: 100%;
+    //         height: 100%;
+    //         background: rgba(0, 0, 0, 0.8);
+    //         display: flex;
+    //         justify-content: center;
+    //         align-items: center;
+    //         z-index: 9999;
+    //         opacity: 0;
+    //         transition: opacity 0.3s ease;
+    //     `;
         
-        const countdownElement = document.createElement('div');
-        countdownElement.id = 'countdown-number';
-        countdownElement.style.cssText = `
-            font-size: 120px;
-            color: #fff;
-            font-weight: bold;
-            text-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
-            transform: scale(0);
-            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        `;
+    //     const countdownElement = document.createElement('div');
+    //     countdownElement.id = 'countdown-number';
+    //     countdownElement.style.cssText = `
+    //         font-size: 120px;
+    //         color: #fff;
+    //         font-weight: bold;
+    //         text-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+    //         transform: scale(0);
+    //         transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    //     `;
         
-        overlay.appendChild(countdownElement);
-        document.body.appendChild(overlay);
+    //     overlay.appendChild(countdownElement);
+    //     document.body.appendChild(overlay);
         
-        return { overlay, countdownElement };
-    }
+    //     return { overlay, countdownElement };
+    // }
 
-    // Animation countdown
-    function startCountdown() {
-        if (countdownActive) return;
+    // // Animation countdown
+    // function startCountdown() {
+    //     if (countdownActive) return;
         
-        countdownActive = true;
-        const { overlay, countdownElement } = createCountdownOverlay();
+    //     countdownActive = true;
+    //     const { overlay, countdownElement } = createCountdownOverlay();
         
-        // Fade in overlay
-        setTimeout(() => {
-            overlay.style.opacity = '1';
-        }, 10);
+    //     // Fade in overlay
+    //     setTimeout(() => {
+    //         overlay.style.opacity = '1';
+    //     }, 10);
         
-        let count = 5;
+    //     let count = 5;
         
-        function updateCountdown() {
-            countdownElement.textContent = count;
-            countdownElement.style.transform = 'scale(1.2)';
-            countdownElement.style.color = count <= 2 ? '#ff4757' : '#fff';
+    //     function updateCountdown() {
+    //         countdownElement.textContent = count;
+    //         countdownElement.style.transform = 'scale(1.2)';
+    //         countdownElement.style.color = count <= 2 ? '#ff4757' : '#fff';
             
-            // Bounce effect
-            setTimeout(() => {
-                countdownElement.style.transform = 'scale(1)';
-            }, 150);
+    //         // Bounce effect
+    //         setTimeout(() => {
+    //             countdownElement.style.transform = 'scale(1)';
+    //         }, 150);
             
-            if (count > 1) {
-                count--;
-                setTimeout(updateCountdown, 1000);
-            } else {
-                // Countdown finished
-                setTimeout(() => {
-                    showFactWithEffect();
+    //         if (count > 1) {
+    //             count--;
+    //             setTimeout(updateCountdown, 1000);
+    //         } else {
+    //             // Countdown finished
+    //             setTimeout(() => {
+    //                 showFactWithEffect();
                     
-                    // Fade out overlay
-                    overlay.style.opacity = '0';
-                    setTimeout(() => {
-                        document.body.removeChild(overlay);
-                        countdownActive = false;
-                    }, 300);
-                }, 1000);
-            }
-        }
+    //                 // Fade out overlay
+    //                 overlay.style.opacity = '0';
+    //                 setTimeout(() => {
+    //                     document.body.removeChild(overlay);
+    //                     countdownActive = false;
+    //                 }, 300);
+    //             }, 1000);
+    //         }
+    //     }
         
-        updateCountdown();
-    }
-    // Thêm variables này ở đầu file (sau dòng let clickCount = 0;)
-    let recentlyShownFacts = [];
-    const MAX_RECENT_FACTS = 15; // Số fact gần nhất để tránh lặp lại
+    //     updateCountdown();
+    // }
+    // // Thêm variables này ở đầu file (sau dòng let clickCount = 0;)
+    // let recentlyShownFacts = [];
+    // const MAX_RECENT_FACTS = 15; // Số fact gần nhất để tránh lặp lại
 
-    // Thêm function này trước function showFactWithEffect()
-    function getUniqueFact() {
-        if (recentlyShownFacts.length >= facts.length) {
-            recentlyShownFacts = [];
-        }
+    // // Thêm function này trước function showFactWithEffect()
+    // function getUniqueFact() {
+    //     if (recentlyShownFacts.length >= facts.length) {
+    //         recentlyShownFacts = [];
+    //     }
         
-        const availableFacts = facts.filter(fact => !recentlyShownFacts.includes(fact));
+    //     const availableFacts = facts.filter(fact => !recentlyShownFacts.includes(fact));
         
-        if (availableFacts.length === 0) {
-            recentlyShownFacts = [];
-            return facts[Math.floor(Math.random() * facts.length)];
-        }
+    //     if (availableFacts.length === 0) {
+    //         recentlyShownFacts = [];
+    //         return facts[Math.floor(Math.random() * facts.length)];
+    //     }
         
-        const selectedFact = availableFacts[Math.floor(Math.random() * availableFacts.length)];
+    //     const selectedFact = availableFacts[Math.floor(Math.random() * availableFacts.length)];
         
-        recentlyShownFacts.push(selectedFact);
+    //     recentlyShownFacts.push(selectedFact);
         
-        if (recentlyShownFacts.length > MAX_RECENT_FACTS) {
-            recentlyShownFacts.shift();
-        }
+    //     if (recentlyShownFacts.length > MAX_RECENT_FACTS) {
+    //         recentlyShownFacts.shift();
+    //     }
         
-        return selectedFact;
-    }
+    //     return selectedFact;
+    // }
 
-    // Hiển thị fact với hiệu ứng đẹp
-    function showFactWithEffect() {
-        const randomFact = getUniqueFact(); // Sử dụng hàm mới để tránh lặp lại
+    // // Hiển thị fact với hiệu ứng đẹp
+    // function showFactWithEffect() {
+    //     const randomFact = getUniqueFact(); // Sử dụng hàm mới để tránh lặp lại
         
-        // Tạo notification đặc biệt
-        const notification = document.createElement('div');
-        notification.style.cssText = `
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(0);
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
-            color: white;
-            padding: 20px 30px;
-            border-radius: 15px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            font-size: 18px;
-            text-align: center;
-            max-width: 400px;
-            z-index: 10000;
-            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            border: 2px solid rgba(255, 255, 255, 0.2);
-        `;
+    //     // Tạo notification đặc biệt
+    //     const notification = document.createElement('div');
+    //     notification.style.cssText = `
+    //         position: fixed;
+    //         top: 50%;
+    //         left: 50%;
+    //         transform: translate(-50%, -50%) scale(0);
+    //         background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    //         color: white;
+    //         padding: 20px 30px;
+    //         border-radius: 15px;
+    //         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    //         font-size: 18px;
+    //         text-align: center;
+    //         max-width: 400px;
+    //         z-index: 10000;
+    //         transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    //         border: 2px solid rgba(255, 255, 255, 0.2);
+    //     `;
         
-        notification.innerHTML = `
-            <div style="margin-bottom: 10px; font-size: 24px;">Fact</div>
-            <div>${randomFact}</div>
-        `;
+    //     notification.innerHTML = `
+    //         <div style="margin-bottom: 10px; font-size: 24px;">Fact</div>
+    //         <div>${randomFact}</div>
+    //     `;
         
-        document.body.appendChild(notification);
+    //     document.body.appendChild(notification);
         
-        // Animation show
-        setTimeout(() => {
-            notification.style.transform = 'translate(-50%, -50%) scale(1)';
-        }, 50);
+    //     // Animation show
+    //     setTimeout(() => {
+    //         notification.style.transform = 'translate(-50%, -50%) scale(1)';
+    //     }, 50);
         
-        // Animation hide after 4 seconds
-        setTimeout(() => {
-            notification.style.transform = 'translate(-50%, -50%) scale(0)';
-            notification.style.opacity = '0';
+    //     // Animation hide after 4 seconds
+    //     setTimeout(() => {
+    //         notification.style.transform = 'translate(-50%, -50%) scale(0)';
+    //         notification.style.opacity = '0';
             
-            setTimeout(() => {
-                document.body.removeChild(notification);
-            }, 500);
-        }, 4000);
+    //         setTimeout(() => {
+    //             document.body.removeChild(notification);
+    //         }, 500);
+    //     }, 4000);
         
-        // Avatar effect
-        profileAvatar.style.transition = 'all 0.3s ease';
-        profileAvatar.style.background = 'linear-gradient(45deg, #333, #555, #777)';
-        profileAvatar.style.transform = 'scale(1.1)';
-        profileAvatar.style.boxShadow = '0 0 20px rgba(255, 255, 255, 0.5)';
+    //     // Avatar effect
+    //     profileAvatar.style.transition = 'all 0.3s ease';
+    //     profileAvatar.style.background = 'linear-gradient(45deg, #333, #555, #777)';
+    //     profileAvatar.style.transform = 'scale(1.1)';
+    //     profileAvatar.style.boxShadow = '0 0 20px rgba(255, 255, 255, 0.5)';
         
-        setTimeout(() => {
-            profileAvatar.style.transform = 'scale(1)';
-            profileAvatar.style.boxShadow = 'none';
-        }, 300);
-    }
+    //     setTimeout(() => {
+    //         profileAvatar.style.transform = 'scale(1)';
+    //         profileAvatar.style.boxShadow = 'none';
+    //     }, 300);
+    // }
 
-    // Hiệu ứng click counter visual
-    function showClickProgress() {
-        // Tạo progress indicator
-        let progressBar = document.getElementById('click-progress');
-        if (!progressBar) {
-            progressBar = document.createElement('div');
-            progressBar.id = 'click-progress';
-            progressBar.style.cssText = `
-                position: absolute;
-                bottom: -5px;
-                left: 0;
-                height: 3px;
-                background: linear-gradient(90deg, #667eea, #764ba2);
-                border-radius: 2px;
-                transition: width 0.3s ease;
-                width: 0%;
-            `;
-            profileAvatar.style.position = 'relative';
-            profileAvatar.appendChild(progressBar);
-        }
+    // // Hiệu ứng click counter visual
+    // function showClickProgress() {
+    //     // Tạo progress indicator
+    //     let progressBar = document.getElementById('click-progress');
+    //     if (!progressBar) {
+    //         progressBar = document.createElement('div');
+    //         progressBar.id = 'click-progress';
+    //         progressBar.style.cssText = `
+    //             position: absolute;
+    //             bottom: -5px;
+    //             left: 0;
+    //             height: 3px;
+    //             background: linear-gradient(90deg, #667eea, #764ba2);
+    //             border-radius: 2px;
+    //             transition: width 0.3s ease;
+    //             width: 0%;
+    //         `;
+    //         profileAvatar.style.position = 'relative';
+    //         profileAvatar.appendChild(progressBar);
+    //     }
         
-        const progress = (clickCount / 7) * 100;
-        progressBar.style.width = progress + '%';
+    //     const progress = (clickCount / 7) * 100;
+    //     progressBar.style.width = progress + '%';
         
-        // Pulse effect on avatar
-        profileAvatar.style.transform = 'scale(1.05)';
-        setTimeout(() => {
-            profileAvatar.style.transform = 'scale(1)';
-        }, 150);
+    //     // Pulse effect on avatar
+    //     profileAvatar.style.transform = 'scale(1.05)';
+    //     setTimeout(() => {
+    //         profileAvatar.style.transform = 'scale(1)';
+    //     }, 150);
         
-        if (clickCount === 7) {
-            progressBar.style.width = '0%';
-        }
-    }
+    //     if (clickCount === 7) {
+    //         progressBar.style.width = '0%';
+    //     }
+    // }
 
-    // Main event listener
-    profileAvatar.addEventListener('click', function() {
-        clickCount++;
-        showClickProgress();
+    // // Main event listener
+    // profileAvatar.addEventListener('click', function() {
+    //     clickCount++;
+    //     showClickProgress();
         
-        if (clickCount === 7) {
-            showFactWithEffect();
-            clickCount = 0;
-        }
-    });
+    //     if (clickCount === 7) {
+    //         showFactWithEffect();
+    //         clickCount = 0;
+    //     }
+    // });
 
-    // CSS animations (thêm vào head nếu chưa có)
-    if (!document.getElementById('easter-egg-styles')) {
-        const style = document.createElement('style');
-        style.id = 'easter-egg-styles';
-        style.textContent = `
-            @keyframes pulse {
-                0% { transform: scale(1); }
-                50% { transform: scale(1.1); }
-                100% { transform: scale(1); }
-            }
+    // // CSS animations (thêm vào head nếu chưa có)
+    // if (!document.getElementById('easter-egg-styles')) {
+    //     const style = document.createElement('style');
+    //     style.id = 'easter-egg-styles';
+    //     style.textContent = `
+    //         @keyframes pulse {
+    //             0% { transform: scale(1); }
+    //             50% { transform: scale(1.1); }
+    //             100% { transform: scale(1); }
+    //         }
             
-            @keyframes glow {
-                0%, 100% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
-                50% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); }
-            }
-        `;
-        document.head.appendChild(style);
-    }
+    //         @keyframes glow {
+    //             0%, 100% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
+    //             50% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); }
+    //         }
+    //     `;
+    //     document.head.appendChild(style);
+    // }
 
     // Console message for developers
     console.log(`
